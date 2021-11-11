@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container" id="container">
+
+    </div>
+    <script type="text/javascript">
+      (async () => {
+        await fetch("https://174836-19.web1.fh-htwchur.ch/wp-json/wp/v2/posts/11")
+          .then ((response) => response.json())
+          .then ((data) => writePost(data));
+
+        await fetch("https://174836-19.web1.fh-htwchur.ch/wp-json/acf/v3/posts/11")
+          .then ((response) => response.json())
+          .then ((data) => writeAcfPost(data));
+      })();
+
+      function writePost(jsonData) {
+        showModel(jsonData.title.rendered);
+      }
+
+      function writeAcfPost(jsonData) {
+        	showAcfModel(jsonData.acf.kategorie, jsonData.acf.kurzbeschreibung, jsonData.acf.beitragsbild.url, jsonData.acf.autor, jsonData.acf.anwendung, jsonData.acf.erklaerung, jsonData.acf.schritt_fuer_schritt, jsonData.acf.beispiel.url, jsonData.acf.kritik, jsonData.acf.kombinierbarkeit);
+        }
+
+      function showModel(title) {
+        const h1 = document.createElement("h1");
+        h1.textContent = title;
+        container.appendChild(h1);
+      }
+
+      function showAcfModel(category, description, postImage, author, usage, explanation, stepbystep, exampleImage, criticism, combinable) {
+        const kategorieText = document.createElement("h2");
+      	kategorieText.textContent = category;
+      	const kurzbeschreibungText = document.createElement("p");
+      	kurzbeschreibungText.innerHTML = description;
+        const autorText = document.createElement("p");
+        autorText.innerHTML = author;
+        const beitragsbildImage = document.createElement("img");
+        beitragsbildImage.src = postImage;
+        const anwendungText = document.createElement("p");
+        anwendungText.innerHTML = usage;
+        const erklaerungText = document.createElement("p");
+        erklaerungText.innerHTML = explanation;
+        const schrittfuerschrittText = document.createElement("p");
+        schrittfuerschrittText.innerHTML = stepbystep;
+        const beispielImage = document.createElement("img");
+        beispielImage.src = exampleImage;
+        const kritikText = document.createElement("p");
+        kritikText.innerHTML = criticism;
+        const kombinierbarkeitText = document.createElement("p");
+        kombinierbarkeitText.innerHTML = combinable;
+        container.appendChild(kategorieText);
+        container.appendChild(autorText);
+        container.appendChild(beitragsbildImage);
+        container.appendChild(kurzbeschreibungText);
+        container.appendChild(anwendungText);
+        container.appendChild(erklaerungText);
+        container.appendChild(schrittfuerschrittText);
+        container.appendChild(schrittfuerschrittText);
+        container.appendChild(beispielImage);
+        container.appendChild(kritikText);
+        container.appendChild(kombinierbarkeitText);
+      }
+    </script>
+  </body>
+</html>
