@@ -10,10 +10,11 @@ fetch("https://174836-19.web1.fh-htwchur.ch/wp-json/wp/v2/posts")
 //geht durch das Array von fetch und ruft die Funktionen PostsAnzeigen und customField für jeden Post auf.
 function writePosts(arrayMitAllenPosts) {
 	//console.log(arrayMitAllenPosts);
+	//Woher kommt onePosts?
 	arrayMitAllenPosts.forEach((onePosts, i) => {
 		customField(onePosts.id);
 		//customFieldsAnzeigen(kategorieData);
-		PostsAnzeigen(onePosts.title.rendered, onePosts.content.rendered, kategorieArray[i]);
+		setTimeout(() => { PostsAnzeigen(onePosts.title.rendered, onePosts.content.rendered, kategorieArray[i]); }, 2000);
 	});
 
 	}
@@ -27,7 +28,7 @@ function PostsAnzeigen(title, content, category) {
 	const p = document.createElement("p");
 	p.innerHTML = content;
 	const kategorie = document.createElement("p");
-	kategorie.innerHTML = kategorieArray[2];
+	kategorie.innerHTML = category;
 	container.appendChild(card);
 	card.appendChild(h1);
 	card.appendChild(kategorie);
@@ -52,11 +53,12 @@ function customField(id){
 
 //Gibt das custom field in der Konsole aus
 function writeCustomField(data){
-	console.log(data.acf.kategorie);
+	//console.log(data.acf.kategorie);
 	kategorieArray.push(data.acf.kategorie);
+	console.log(kategorieArray);
 	const kategorie = document.createElement("p");
 	kategorie.innerHTML = data.acf.kategorie;
-	container.appendChild(kategorie);
+	//container.appendChild(kategorie);
 	//console.log(data.acf.kurzbeschreibung);
 }
 
