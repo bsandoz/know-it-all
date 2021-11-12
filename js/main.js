@@ -14,13 +14,13 @@ function writePosts(arrayMitAllenPosts) {
 	arrayMitAllenPosts.forEach((onePosts, i) => {
 		customField(onePosts.id);
 		//customFieldsAnzeigen(kategorieData);
-		setTimeout(() => { PostsAnzeigen(onePosts.title.rendered, onePosts.content.rendered, kategorieArray[i]); }, 2000);
+		setTimeout(() => { PostsAnzeigen(onePosts.title.rendered, onePosts.content.rendered, kategorieArray[i], onePosts.id); }, 2000);
 	});
 
 	}
 
 //erstellt ein card-Div mit Titel und Content und hängt die Elemente an den container an.
-function PostsAnzeigen(title, content, category) {
+function PostsAnzeigen(title, content, category, id) {
 	const card = document.createElement("div");
 	card.setAttribute("class", "card");
 	const h1 = document.createElement("h1");
@@ -34,7 +34,7 @@ function PostsAnzeigen(title, content, category) {
 	card.appendChild(kategorie);
 	card.appendChild(p);
 	card.addEventListener("click", function() {
-		location.href='https://174836-21.web1.fh-htwchur.ch/php/model.html';
+		location.href='https://174836-21.web1.fh-htwchur.ch/php/model.html?postid=' + id;
 	})
 	console.log(kategorieArray);
 }

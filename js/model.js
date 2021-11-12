@@ -1,9 +1,12 @@
+const params = new URLSearchParams(document.location.search);
+const postid = params.get("postid");
+
 (async () => {
-  await fetch("https://174836-19.web1.fh-htwchur.ch/wp-json/wp/v2/posts/11")
+  await fetch("https://174836-19.web1.fh-htwchur.ch/wp-json/wp/v2/posts/" + postid)
     .then ((response) => response.json())
     .then ((data) => writePost(data));
 
-  await fetch("https://174836-19.web1.fh-htwchur.ch/wp-json/acf/v3/posts/11")
+  await fetch("https://174836-19.web1.fh-htwchur.ch/wp-json/acf/v3/posts/" + postid)
     .then ((response) => response.json())
     .then ((data) => writeAcfPost(data));
 })();
@@ -13,7 +16,7 @@ function writePost(jsonData) {
 }
 
 function writeAcfPost(jsonData) {
-    showAcfModel(jsonData.acf.kategorie, jsonData.acf.kurzbeschreibung, jsonData.acf.beitragsbild.url, jsonData.acf.autor, jsonData.acf.anwendung, jsonData.acf.erklaerung, jsonData.acf.schritt_fuer_schritt, jsonData.acf.beispiel.url, jsonData.acf.kritik, jsonData.acf.kombinierbarkeit);
+    showAcfModel(jsonData.acf.kategorie, jsonData.acf.kurzbeschreibung, jsonData.acf.beitragsbild.url, jsonData.acf.autor, jsonData.acf.anwendung, jsonData.acf.erklaerung, jsonData.acf.schritt_fuer_schritt, jsonData.acf.beispiel_bild.url, jsonData.acf.beispiel_text, jsonData.acf.kritik, jsonData.acf.kombinierbarkeit);
   }
 
 function showModel(title) {
@@ -22,7 +25,7 @@ function showModel(title) {
   container.appendChild(h1);
 }
 
-function showAcfModel(category, description, postImage, author, usage, explanation, stepbystep, exampleImage, criticism, combinable) {
+function showAcfModel(category, description, postImage, author, usage, explanation, stepbystep, exampleImage, exampleText, criticism, combinable) {
   const kategorieText = document.createElement("h2");
   kategorieText.textContent = category;
   const kurzbeschreibungText = document.createElement("p");
@@ -39,6 +42,8 @@ function showAcfModel(category, description, postImage, author, usage, explanati
   schrittfuerschrittText.innerHTML = stepbystep;
   const beispielImage = document.createElement("img");
   beispielImage.src = exampleImage;
+  const beispielText = document.createElement("p");
+  beispielText.innerHTML = exampleText;
   const kritikText = document.createElement("p");
   kritikText.innerHTML = criticism;
   const kombinierbarkeitText = document.createElement("p");
@@ -52,6 +57,7 @@ function showAcfModel(category, description, postImage, author, usage, explanati
   container.appendChild(schrittfuerschrittText);
   container.appendChild(schrittfuerschrittText);
   container.appendChild(beispielImage);
+  container.appendChild(beispielText);
   container.appendChild(kritikText);
   container.appendChild(kombinierbarkeitText);
 }
