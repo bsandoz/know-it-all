@@ -1,3 +1,6 @@
+const params = new URLSearchParams(document.location.search);
+const categoryid = params.get("categoryid");
+
 var kategorieArray = [];
 // var postNumber;
 
@@ -12,9 +15,11 @@ function writePosts(arrayMitAllenPosts) {
 	//console.log(arrayMitAllenPosts);
 	//Woher kommt onePosts?
 	arrayMitAllenPosts.forEach((onePosts, i) => {
-		customField(onePosts.id);
-		//customFieldsAnzeigen(kategorieData);
-		setTimeout(() => { PostsAnzeigen(onePosts.title.rendered, onePosts.content.rendered, kategorieArray[i], onePosts.id); }, 2000);
+		if (onePosts.categories == categoryid) {
+			customField(onePosts.id);
+			//customFieldsAnzeigen(kategorieData);
+			setTimeout(() => { PostsAnzeigen(onePosts.title.rendered, onePosts.content.rendered, kategorieArray[i], onePosts.id); }, 2000);
+		}
 	});
 
 	}
