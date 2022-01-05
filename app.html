@@ -2,13 +2,13 @@
 <html lang="de" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Know-it-All</title>
+    <title>Über die App</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 
     <style>
 
        .hero {
-         background: url(assets/Know-It-All_Hero-big_.png) center;
+         background: url(assets/Know-It-All_Hero-big_.png) center / cover;
        }
 
 
@@ -17,6 +17,15 @@
         margin-left: auto;
         margin-right: auto;
       }
+
+      h1 {
+        font-size: 5em;
+      }
+
+      h4 {
+        font-size: 5em;
+      }
+
 
     </style>
 
@@ -73,18 +82,17 @@
   </nav>
 
 
-<!-- Hero App-Seite -->
-    <div class="hero is-info is medium">
+<!-- Die Hero-Einstellungen sind von der Home-Seite übernommen, das Framework passt aber automatisch das Sizing des Bildes an, bezogen auf den Text-Inhalt und die vergebenen Margins/Paddings.  -->
+    <div class="hero is-medium">
       <div class="hero-body">
-          <h1 class="is-size-1 my-4 has-text-centered has-text-weight-bold">
-            Wissen 2 Go
+          <h1 class="has-text-weight-bold" style="color: #DA3C8E" >
+            Überall mit dabei.
           </h1>
-          <p class="subtitle my-3 has-text-left">
-            Wissen ist Macht: Ein Spruch, <br>
-            den wir alle kennen. Doch Wissen <br>
-            bedeutet Zeit aufwenden… <br>
+          <p class="subtitle is-size-3 my-1">
+            Wissen ist Macht: <br>
+            Ein Spruch, den wir alle kennen.<br>
+            Aber für Wissen braucht man Zeit... <br>
             Nicht mit Know-it-All! <br>
-            Hier gibts knowledge to go.<br>
           </p>
       </div>
     </div>
@@ -92,25 +100,32 @@
 
 <!-- Section 01-->
 
-<section>
-    <div class="columns">
-    <div class="column">
-      <p class="has-text-right">
-        Seit ich mit Know-it-All arbeite, verstehe ich die Anliegen und Projekte meiner Kundschaft viel besser. Unsere Welt ist so komplex, dass ich ohne Frameworks meinen Service nicht für jede Branche anbieten könnte. Dank Know-it-All kann ich mich mit Professionellen aus allen Branchen unterhalten.
-      </p>
+<section class="section is-medium" style="max-width: 70%; ">
+
+  <h2 class="is-size-2 has-text-centered my-6">Das sagen unsere glücklichen Kund*innen über Know-It-All</h2>
+
+
+    <div class="columns box" style="background-color:#F6CEE3">
+      <div class="column">
+        <h3 class="is-size-3 has-text-right" style="color:#DA3C8E"> Elena Marina, 30</h3>
+        <p class="has-text-right">
+          Seit ich mit Know-it-All arbeite, verstehe ich die Anliegen und Projekte meiner Kundschaft viel besser. Unsere Welt ist so komplex, dass ich ohne Frameworks meinen Service nicht für jede Branche anbieten könnte. Dank Know-it-All kann ich mich mit Professionellen aus allen Branchen unterhalten.
+        </p>
+      </div>
+      <figure class="column is-one-quarter">
+          <img src="assets/portrait_1" alt="Unsere Kundin Elena">
+      </figure>
     </div>
-    <div class="column">
-      <img src="" alt="persona_1" class="column">
-    </div>
-  </div>
 
   <div class="column"></div>
 
-    <div class="columns">
-      <div class="column">
-      <img src="" alt="persona_2" class="column">
-      </div>
+    <div class="columns box" style="background-color:#F6CEE3">
+      <figure class="column is-one-quarter">
+          <img src="assets/portrait_2" alt="Unsere Kunding Elena">
+      </figure>
+
     <div class="column">
+      <h3 class="is-size-3" style="color:#DA3C8E"> Bernd Marner, 45</h3>
       <p class="">
         In Briefing-Prozessen mit unseren Projektleitenden merke ich oftmals, wie ich an meine Grenzen stosse. Design ist nicht nur etwas Schönes machen: Es geht darum, unsere Kundschaft weiterzubringen mit einer angemessenen Design-Sprache. Ich arbeite in der Ideation-Phase deshalb viel mit Know-it-All, weil ich so Themen begreife, die ich sonst nicht so schnell verstanden hätte.
       </p>
@@ -119,102 +134,183 @@
 
   <div class="column"></div>
 
-  <div class="columns">
-    <div class="column is-two-fifths">
+  <div class="columns box" style="background-color:#F6CEE3">
+    <div class="column">
+      <h3 class="is-size-3 has-text-right" style="color:#DA3C8E"> Tom Müller, 19</h3>
       <p class="has-text-right">
       Studieren ist pure Arbeit:  Möchte ich jedem Fach so viel Aufmerksamkeit geben, wie es verdient, würde ich nicht mehr schlafen. Deshalb lerne ich mit Know-it-All:
       Die Modelle behandeln wir sowieso im Unterricht und die Beispiele dazu sind gut verständlich. So habe ich mein tägliches Lernziel um eine halbe Stunde verringern können, was mir Ende Woche erlaubt, auch einfach mal etwas mit meinen Freunden zu machen.
     </p>
   </div>
-    <div class="column">
-    <img src="" alt="persona_3" class="column">
-    </div>
+    <figure class="column is-one-quarter">
+        <img src="assets/portrait_3" alt="Unsere Kunding Elena">
+    </figure>
   </div>
 
 </section>
 
-<section >
-  
+<div class="py-6 px-6" style="background-color: #F6CEE3">
+
+  <div class="columns" style="max-width: 70%">
+
+    <div class="column mx-6 has-text-centered">
+      <figure class="image is-128x128 is-inline-block">
+        <img class="is-rounded" src="assets/icon_wissen.png">
+      </figure>
+    </div>
+
+    <div class="column mx-6 has-text-centered">
+      <figure class="image is-128x128 is-inline-block">
+        <img class="is-rounded" src="assets/icon_wissen_gefasst.png">
+      </figure>
+    </div>
+
+    <div class="column mx-6 has-text-centered">
+      <figure class="image is-128x128 is-inline-block">
+        <img class="is-rounded" src="assets/icon_aha.png">
+      </figure>
+    </div>
+
+  </div>
+
+  <h3 class="has-text-centered is-size-4"> Know-it-All ist eine App, die dir die Themen der Welt mit mentalen Modellen weiterbringt. </h3>
+
+</div>
+
+<section class="section is-medium">
+
+    <p class="is-size-4">Mentale Modelle sind Erklärungen, wie die Dinge funktionieren auf dieser Welt. Sie sind Muster, Rahmenstories, Gerüste die unser Hirn erkennt, sodass wir Situationen schneller einschätzen können und so schneller zu Entscheidungen kommen. <br><br>
+      Obwohl mentale Modelle immer unperfekt sind, dienen sie dir im Alltag: Sie abstrahieren grosse, komplexe Sachverhalte und lassen dich Probleme schneller verstehen und lösen. Wer eine grosse Palette an mentalen Modellen kennt und anwenden kann, entwickelt ein selbstständiges, kritisches Denken, das den Herausforderungen der Welt gewachsen ist. </p>
+
+</section>
+
+
+<!-- Dieser Abschnitt fasst eine Aufzählung von drei Bild- und Textelementen, die im Design immer wieder verwendet werden. Die Text- und Bild-Elemente sind als Blöcke in der jeweiligen Spalte angeordnet.  -->
+<section class="section">
+
+  <h2 class="is-size-2 has-text-centered is-full my-6">Gründe warum du mit mentalen Modellen besser lernst</h2>
+
+  <div class="columns">
+
+    <div class="column mx-6 has-text-centered">
+      <figure class="image is-128x128 is-inline-block">
+        <img class="is-rounded" src="assets/icon_welt.png">
+      </figure>
+      <p class="is-size-5 my-3">Sie nehmen realen Sachverhalten ihre Komplexität.</p>
+    </div>
+
+    <div class="column mx-6 has-text-centered">
+      <figure class="image is-128x128 is-inline-block">
+        <img class="is-rounded" src="assets/icon_puzzle.png">
+      </figure>
+      <p class="is-size-5 my-3">Sie setzen da an, wo du bereits über Wissen verfügst. </p>
+    </div>
+
+    <div class="column mx-6 has-text-centered">
+      <figure class="image is-128x128 is-inline-block">
+        <img class="is-rounded" src="assets/icon_pfeil.png">
+      </figure>
+      <p class="is-size-5 my-3">Sie zeigen dir schematisch, was eigentlich abgeht.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- Grosse Section, die das Reason Why der App definiert. -->
+<section class="section is-large">
+
+  <h4 class="has-text-centered">Mentale Modelle schaffen eine <span style="color:#DA3C8E">Brücke </span> zwischen dir und dem Wissen.</h2>
+
+</section>
+
+
+<!-- Section mit den abschliessenden Verkaufsargumenten im bekannten 3-bubbles-Layout -->
+<section class="section">
+
+  <h2 class="is-size-2 has-text-centered is-full my-6">Sie schenken dir Zugang zu neuer Kompetenz und lassen
+  dich die Welt verstehen. <br><br> Das erwartet dich nun bei <span style="color: #DA3C8E; font-weight: bold">Know-it-All:</span></h2>
+
+  <div class="columns">
+
+    <div class="column mx-6 has-text-centered">
+      <figure class="image is-128x128 is-inline-block">
+        <img class="is-rounded" src="assets/icon_fahne.png">
+      </figure>
+      <p class="is-size-5 my-3">Sammlung von Modellen aus den Bereichen Wirtschaft, Marketing, Kommunikation und Psychologie.</p>
+    </div>
+
+    <div class="column mx-6 has-text-centered">
+      <figure class="image is-128x128 is-inline-block">
+        <img class="is-rounded" src="assets/icon_megaphon.png">
+      </figure>
+      <p class="is-size-5 my-3">Ein Forum, in dem du dich mit uns und anderen Begeisterten austauschen kannst. </p>
+    </div>
+
+    <div class="column mx-6 has-text-centered">
+      <figure class="image is-128x128 is-inline-block">
+        <img class="is-rounded" src="assets/icon_medaille.png">
+      </figure>
+      <p class="is-size-5 my-3">Modellinhalt und -anwendungen erklärt in verschiedenen Intensitäts-stufen, um dein neues Wissen zu prüfen.</p>
+    </div>
+
+  </div>
+
+    <h2 class="is-size-2 has-text-centered"> <span style="color: #DA3C8E; font-weight: bold; font-size: 3em;"> ... </span> und bald noch viel mehr!</h2>
+
+</section>
+
+
+
+<section class="section is-medium">
+
+  <h2 class="is-size-1 has-text-centered is-full my-6">Mehr <span style="color: #DA3C8E"> Wissen</span>. Mehr <span style="color: #DA3C8E">Wert</span>.</h2>
+
+  <p class="container has-text-centered is-size-5">Hast auch du Lust, mehr zu lernen? Je mehr du weisst, desto besser verstehst du die Welt.
+      Und das macht dich wertvoller für zukünftige Arbeitgeber und die Gesellschaft, in der du lebst.</p>
+
+  <h3 class="is-size-3 has-text-centered my-4 py-4">Abonnements</h3>
+
+  <div class="columns">
+
+    <div class="column card mx-2" style="background-color:#F6CEE3">
+      <div class="card-content">
+        <p class="title has-text-centered"> 3.-</p>
+        <p class="subtitle has-text-centered">pro Monat</p>
+        <p class="is-size-3 has-text-centered">Know-a-Lot</p>
+        <p class="is-size-5 has-text-centered">Für alle, die viel wissen wollen, aber sowieso nur die Zusammenfassung lesen. </p>
+      </div>
+    </div>
+
+    <div class="column card mx-2" style="background-color:#F6CEE3">
+      <div class="card-content">
+        <p class="title has-text-centered"> 5.-</p>
+        <p class="subtitle has-text-centered">pro Monat</p>
+        <p class="is-size-3 has-text-centered">Know-the-Most</p>
+        <p class="is-size-5 has-text-centered">Für alle, die umfassende Informationen brauchen und es schätzen, wenns kurz ist.</p>
+      </div>
+    </div>
+
+    <div class="column card mx-2" style="background-color:#F6CEE3">
+      <div class="card-content">
+        <p class="title has-text-centered"> 7.-</p>
+        <p class="subtitle has-text-centered">pro Monat</p>
+        <p class="is-size-3 has-text-centered">Know-it-All</p>
+        <p class="is-size-5 has-text-centered">Für alle, die alles wissen wollen. Voll mit Beispielen und Anleitungen, wie du die Welt verstehen lernst.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="container has-text-centered is-size-4 py-2">Alle unsere Abonnements sind monatlich kündbar – obwohl wir überzeugt sind, dass du das nicht machen wirst.
+  <span style="font-weight: bold">Welcome to the journey where we model our minds.</span></p>
+
 </section>
 
 
 
 
-    <p>Mentale Modelle sind Erklärungen, wie die Dinge funktionieren auf dieser Welt. Sie sind Muster, Rahmenstories, Gerüste die unser Hirn erkennt, sodass wir Situationen schneller einschätzen können und so schneller zu Entscheidungen kommen. Obwohl mentale Modelle immer unperfekt sind, dienen sie dir im Alltag: Sie abstrahieren grosse, komplexe Sachverhalte und lassen dich Probleme schneller verstehen und lösen. Wer eine grosse Palette an mentalen Modellen kennt und anwenden kann, entwickelt ein selbstständiges, kritisches Denken, das den Herausforderungen der Welt gewachsen ist. </p>
-
-    <h2>Gründe warum du mit mentalen Modellen besser lernen sollst</h2>
-    <div class="Grund_1">
-      <img src="" alt="Grund_1">
-      <p>Sie nehmen realen
-        Sachverhalten ihre
-        Komplexität.</p>
-    </div>
-
-    <div class="Grund_2">
-      <img src="" alt="Grund_2">
-      <p>Sie setzen da an,
-        wo du bereits über
-        Wissen verfügst.</p>
-    </div>
-
-    <div class="Grund_3">
-      <img src="" alt="Grund_3">
-      <p>Sie zeigen dir
-        schematisch, was
-        eigentlich abgeht.</p>
-    </div>
-
-    <h2>Mentale Modelle schaffen eine Brücke zwischen dir und dem Wissen.</h2>
-
-    <p>Sie schenken dir Zugang zu neuer Kompetenz und lassen
-    dich die Welt verstehen. Das erwartet dich nun bei Know-it-All:</p>
-
-    <div class="Vorteile">
-      <div class="vorteil1">
-        <img src="" alt="">
-        <p>Sammlung von Modellen aus den Bereichen Wirtschaft, Marketing, Kommunikation und Psychologie</p>
-      </div>
-
-      <div class="vorteil2">
-        <img src="" alt="">
-        <p>Ein Forum, in dem du dich mit uns und anderen Begeisterten austauschen kannst</p>
-      </div>
-
-      <div class="vorteil3">
-        <img src="" alt="">
-        <p>Modellinhalt und -anwendungen erklärt in verschiedenen Intensitäts-stufen, um dein neues Wissen  zu prüfen</p>
-      </div>
-
-      <div class="vorteil4">
-        <img src="" alt="">
-        <p>Und viel mehr – in Zukunft! Werde Teil unserer Reise und unterstütze ein Start-Up mit einer Vision.</p>
-
-    <h2>Mehr Wissen. <br> Mehr Wert.</h2>
-
-    <p>Hast auch du Lust, mehr zu lernen? Je mehr du weisst, desto besser verstehst du die Welt.
-    Und das macht dich wertvoller für zukünftige Arbeitgeber und die Gesellschaft, in der du lebst.</p>
-
-    <h3>Abonnements</h3>
-
-    <div class="abo_1">
-
-
-    </div>
-
-    <div class="abo_2">
-
-
-    </div>
-
-    <div class="abo_3">
-
-
-    </div>
-
-    <p>Alle unsere Abonnements sind monatlich kündbar – obwohl wir überzeugt sind, dass du das nicht machen wirst.
-    Welcome to the journey where we model our minds.</p>
-
-    <button type="button" name="button">Zur Registrierung</button>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -246,4 +342,68 @@
 </script>
 
   </body>
+
+
+
+
+<!-- Code für den Footer – ueberall gleich.  -->
+  <footer class="footer">
+
+  <div class="columns">
+    <div class="column has-text-weight-light">
+    <a href="#" style="color:black;">
+      <p>
+      Login
+      </p>
+    </a>
+    </div>
+    <div class="column has-text-right has-text-weight-light">
+      <a href="#" style="color:black;">
+        <p>Impressum</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column has-text-weight-light">
+    <a href="#" style="color:black;">
+      <p>
+      Pricing
+      </p>
+    </a>
+    </div>
+    <div class="column has-text-right has-text-weight-light">
+      <a href="#" style="color:black;">
+        <p>AGB</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column has-text-weight-light">
+    <a href="#" style="color:black;">
+      <p>
+      Team
+      </p>
+    </a>
+    </div>
+    <div class="column has-text-right has-text-weight-light">
+      <a href="#" style="color:black;">
+        <p>Datenschutz</p>
+      </a>
+    </div>
+  </div>
+
+
+
+  <div class="content has-text-centered">
+    <p>
+      <strong>Know It All</strong> by <a href="#" style="color:grey";>Laura von Känel | Bénédict Sandoz | Luana Ferrero</a> <br>
+      <p>Das Projekt entstand im Rahmen des Majors Media Application
+      an der <a href="www.fhgr.ch" style="color:black;">FH Graubünden</a>
+    </p>
+  </div>
+</footer>
+
+
 </html>
