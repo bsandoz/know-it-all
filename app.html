@@ -2,50 +2,143 @@
 <html lang="de" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>App</title>
-    <link rel="stylesheet" href="css/css/mystyles.css">
+    <title>Know-it-All</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <style>
+
+       .hero {
+         background: url(assets/Know-It-All_Hero-big_.png) center;
+       }
+
+
+       section {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+    </style>
+
   </head>
   <body>
 
+    <!-- Navigation -->
+      <nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">
+            <img src="assets/knowitall_Marke.png" width="30" height="30">
+          </a>
 
-    <nav class="topnavigation">
-      <a href="/index.html">Home</a>
-      <a href="/app.html">App</a>
-      <a href="/ueberuns.html">Über uns</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
-
-
-    <div class="head_app">
-
-      <h1>Wissen 2 Go</h1>
-
-      <p>Wissen ist Macht: Ein Spruch,
-        den wir alle kennen. Doch Wissen
-        bedeutet Zeit aufwenden…
-        Nicht mit Know-it-All!
-        Hier gibts knowledge to go.</p>
-
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarTop">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
 
-    <div class="persona_1">
-      <p>Seit ich mit Know-it-All arbeite, verstehe ich die Anliegen und Projekte meiner Kundschaft viel besser. Unsere Welt ist so komplex, dass ich ohne Frameworks meinen Service nicht für jede Branche anbieten könnte. Dank Know-it-All kann ich mich mit Professionellen aus allen Branchen unterhalten. </p>
-      <img src="" alt="persona_1">
+    <div id="navbarTop" class="navbar-menu">
+      <div class="navbar-start">
+        <p class="is-size-5 mx-3">model your mind</p>
+        <a class="navbar-item href="/index.html">
+          Home
+        </a>
+
+        <a class="navbar-item" href="/app.html">
+          App
+        </a>
+
+        <a class="navbar-item href="/ueberuns.html">
+          Über uns
+        </a>
+
+        <a class="navbar-item" href="#kontakt">
+          Kontakt
+        </a>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-secondary">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+  </nav>
+
+
+<!-- Hero App-Seite -->
+    <div class="hero is-info is medium">
+      <div class="hero-body">
+          <h1 class="is-size-1 my-4 has-text-centered has-text-weight-bold">
+            Wissen 2 Go
+          </h1>
+          <p class="subtitle my-3 has-text-left">
+            Wissen ist Macht: Ein Spruch, <br>
+            den wir alle kennen. Doch Wissen <br>
+            bedeutet Zeit aufwenden… <br>
+            Nicht mit Know-it-All! <br>
+            Hier gibts knowledge to go.<br>
+          </p>
+      </div>
     </div>
 
-    <div class="persona_2">
-      <p>In Briefing-Prozessen mit unseren Projektleitenden merke ich oftmals, wie ich an meine Grenzen stosse. Design ist nicht nur etwas Schönes machen: Es geht darum, unsere Kundschaft weiterzubringen mit einer angemessenen Design-Sprache. Ich arbeite in der Ideation-Phase deshalb viel mit Know-it-All, weil ich so Themen begreife, die ich sonst nicht so schnell verstanden hätte. </p>
-      <img src="" alt="persona_2">
+
+<!-- Section 01-->
+
+<section>
+    <div class="columns">
+    <div class="column">
+      <p class="has-text-right">
+        Seit ich mit Know-it-All arbeite, verstehe ich die Anliegen und Projekte meiner Kundschaft viel besser. Unsere Welt ist so komplex, dass ich ohne Frameworks meinen Service nicht für jede Branche anbieten könnte. Dank Know-it-All kann ich mich mit Professionellen aus allen Branchen unterhalten.
+      </p>
     </div>
-
-    <div class="persona_3">
-      <p>Studieren ist pure Arbeit:  Möchte ich jedem Fach so viel Aufmerksamkeit geben, wie es verdient, würde ich nicht mehr schlafen. Deshalb lerne ich mit Know-it-All:
-    Die Modelle behandeln wir sowieso im Unterricht und die Beispiele dazu sind gut verständlich. So habe ich mein tägliches Lernziel um eine halbe Stunde verringern können, was mir Ende Woche erlaubt, auch einfach mal etwas mit meinen Freunden zu machen. </p>
-    <img src="" alt="persona_3">
-
+    <div class="column">
+      <img src="" alt="persona_1" class="column">
     </div>
+  </div>
 
-    <img src="" alt="bild_2">
+  <div class="column"></div>
+
+    <div class="columns">
+      <div class="column">
+      <img src="" alt="persona_2" class="column">
+      </div>
+    <div class="column">
+      <p class="">
+        In Briefing-Prozessen mit unseren Projektleitenden merke ich oftmals, wie ich an meine Grenzen stosse. Design ist nicht nur etwas Schönes machen: Es geht darum, unsere Kundschaft weiterzubringen mit einer angemessenen Design-Sprache. Ich arbeite in der Ideation-Phase deshalb viel mit Know-it-All, weil ich so Themen begreife, die ich sonst nicht so schnell verstanden hätte.
+      </p>
+    </div>
+  </div>
+
+  <div class="column"></div>
+
+  <div class="columns">
+    <div class="column is-two-fifths">
+      <p class="has-text-right">
+      Studieren ist pure Arbeit:  Möchte ich jedem Fach so viel Aufmerksamkeit geben, wie es verdient, würde ich nicht mehr schlafen. Deshalb lerne ich mit Know-it-All:
+      Die Modelle behandeln wir sowieso im Unterricht und die Beispiele dazu sind gut verständlich. So habe ich mein tägliches Lernziel um eine halbe Stunde verringern können, was mir Ende Woche erlaubt, auch einfach mal etwas mit meinen Freunden zu machen.
+    </p>
+  </div>
+    <div class="column">
+    <img src="" alt="persona_3" class="column">
+    </div>
+  </div>
+
+</section>
+
+<section >
+  
+</section>
+
+
+
 
     <p>Mentale Modelle sind Erklärungen, wie die Dinge funktionieren auf dieser Welt. Sie sind Muster, Rahmenstories, Gerüste die unser Hirn erkennt, sodass wir Situationen schneller einschätzen können und so schneller zu Entscheidungen kommen. Obwohl mentale Modelle immer unperfekt sind, dienen sie dir im Alltag: Sie abstrahieren grosse, komplexe Sachverhalte und lassen dich Probleme schneller verstehen und lösen. Wer eine grosse Palette an mentalen Modellen kennt und anwenden kann, entwickelt ein selbstständiges, kritisches Denken, das den Herausforderungen der Welt gewachsen ist. </p>
 
@@ -60,8 +153,8 @@
     <div class="Grund_2">
       <img src="" alt="Grund_2">
       <p>Sie setzen da an,
-        wo du bereits über
-        Wissen verfügst.</p>
+        wo du bereits über
+        Wissen verfügst.</p>
     </div>
 
     <div class="Grund_3">
@@ -71,7 +164,7 @@
         eigentlich abgeht.</p>
     </div>
 
-    <h2>Mentale Modelle schaffen eine Brücke zwischen dir und dem Wissen.</h2>
+    <h2>Mentale Modelle schaffen eine Brücke zwischen dir und dem Wissen.</h2>
 
     <p>Sie schenken dir Zugang zu neuer Kompetenz und lassen
     dich die Welt verstehen. Das erwartet dich nun bei Know-it-All:</p>
@@ -89,7 +182,7 @@
 
       <div class="vorteil3">
         <img src="" alt="">
-        <p>Modellinhalt und -anwendungen erklärt in verschiedenen Intensitäts-stufen, um dein neues Wissen  zu prüfen</p>
+        <p>Modellinhalt und -anwendungen erklärt in verschiedenen Intensitäts-stufen, um dein neues Wissen  zu prüfen</p>
       </div>
 
       <div class="vorteil4">
@@ -123,6 +216,34 @@
 
     <button type="button" name="button">Zur Registrierung</button>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+
+</script>
 
   </body>
 </html>
