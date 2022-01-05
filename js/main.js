@@ -4,11 +4,15 @@ fetch("https://174836-19.web1.fh-htwchur.ch/wp-json/wp/v2/categories")
 	//.then(data => console.log(data))
 	.then((data) => writeCategories(data));
 
+var categoriesNames = [];
+
 //Funktion categoriesAnzeigen wird für jedes Element des fetch arrays ausgeführt
 function writeCategories (arrayMitAllenCategories) {
   arrayMitAllenCategories.forEach((oneCategories, i) => {
     console.log(oneCategories.id);
     categoriesAnzeigen(oneCategories.name, oneCategories.id);
+		categoriesNames.push(oneCategories.name);
+		console.log(categoriesNames);
 	});
 }
 

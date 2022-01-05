@@ -10,19 +10,46 @@ fetch("https://174836-19.web1.fh-htwchur.ch/wp-json/wp/v2/posts")
 	//.then(data => console.log(data))
 	.then((data) => writePosts(data));
 
+createNavigation();
+
 //geht durch das Array von fetch und ruft die Funktionen PostsAnzeigen und customField für jeden Post auf.
 function writePosts(arrayMitAllenPosts) {
 	//console.log(arrayMitAllenPosts);
-	//Woher kommt onePosts?
 	arrayMitAllenPosts.forEach((onePosts, i) => {
 		if (onePosts.categories == categoryid) {
+			let title = document.getElementById("categoryTitle");
+			title.innerHTML = onePosts.acf.kategorie;
+			let subtitle = document.getElementById("categorySubtitle");
+			subtitle.innerHTML = "Übersicht der " + onePosts.acf.kategorie + "-Modelle";
 			customField(onePosts.id);
 			//customFieldsAnzeigen(kategorieData);
 			setTimeout(() => { PostsAnzeigen(onePosts.title.rendered, onePosts.content.rendered, kategorieArray[i], onePosts.id); }, 2000);
 		}
 	});
+}
 
-	}
+function createNavigation () {
+	let prev = document.getElementById("previous-category");
+	prev.addEventListener("click", function() {
+		//Statischer Wert muss dynamisch gemacht werden, falls neue Kategorien dazukommen
+		if (categoryid > 3) {
+			parsed = parseInt(categoryid);
+			parsed = parsed - 1;
+			console.log(parsed);
+			location.href='https://174836-21.web1.fh-htwchur.ch/subsites/category.html?categoryid=' + parsed;
+		}
+	})
+	let next = document.getElementById("next-category");
+	next.addEventListener("click", function() {
+		//Statischer Wert muss dynamisch gemacht werden, falls neue Kategorien dazukommen
+		if (categoryid < 7) {
+			parsed = parseInt(categoryid);
+			parsed = parsed + 1;
+			console.log(parsed);
+			location.href='https://174836-21.web1.fh-htwchur.ch/subsites/category.html?categoryid=' + parsed;
+		}
+	})
+}
 
 //erstellt ein card-Div mit Titel und Content und hängt die Elemente an den container an.
 function PostsAnzeigen(title, content, category, id) {
@@ -39,6 +66,7 @@ function PostsAnzeigen(title, content, category, id) {
 	card.appendChild(kategorie);
 	card.appendChild(p);
 	card.addEventListener("click", function() {
+		localStorage.setItem("modelCategory", categoryid);
 		location.href='https://174836-21.web1.fh-htwchur.ch/subsites/model.html?postid=' + id;
 	})
 	console.log(kategorieArray);

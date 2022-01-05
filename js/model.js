@@ -12,14 +12,14 @@ const postid = params.get("postid");
 })();
 
 function writePost(jsonData) {
-  showModel(jsonData.title.rendered);
+  showModel(jsonData.title.rendered, jsonData.acf.kategorie);
 }
 
 function writeAcfPost(jsonData) {
     showAcfModel(jsonData.acf.kategorie, jsonData.acf.kurzbeschreibung, jsonData.acf.beitragsbild.url, jsonData.acf.autor, jsonData.acf.anwendung, jsonData.acf.erklaerung, jsonData.acf.schritt_fuer_schritt, jsonData.acf.beispiel_bild.url, jsonData.acf.beispiel_text, jsonData.acf.kritik, jsonData.acf.kombinierbarkeit);
   }
 
-function showModel(title) {
+function showModel(title, category) {
   const h1 = document.createElement("h1");
   h1.textContent = title;
   container.appendChild(h1);
@@ -28,6 +28,11 @@ function showModel(title) {
 function showAcfModel(category, description, postImage, author, usage, explanation, stepbystep, exampleImage, exampleText, criticism, combinable) {
   const kategorieText = document.createElement("h2");
   kategorieText.textContent = category;
+  kategorieText.addEventListener("click", function() {
+    //localStorage Lösung ist nicht optimal, falls der Local Storage aus irgendwelchem Grund geleert wird funktioniert der Link nicht mehr richtig
+    let id = localStorage.getItem("modelCategory");
+    location.href='https://174836-21.web1.fh-htwchur.ch/subsites/category.html?categoryid=' + id;
+	})
   const kurzbeschreibungText = document.createElement("p");
   kurzbeschreibungText.innerHTML = description;
   const autorText = document.createElement("p");
