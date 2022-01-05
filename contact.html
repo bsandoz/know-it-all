@@ -8,9 +8,12 @@
     <style>
 
        .hero {
-         background: url(assets/Know-It-All_Hero-blau.png) center;
+         background: url(assets/Know-It-All_Hero-blau.png) center / cover;
        }
 
+       h1 {
+         font-size: 5em;
+       }
 
        section {
         max-width: 50%;
@@ -72,15 +75,24 @@
       </div>
     </nav>
 
-  <section class="hero">
-    <img src="assets/Know-It-All_Hero-blau.png" alt="Kontaktformular">
-    <h1 class="is-size-1 my-4 has-text-centered has-text-weight-bold" style="color: #6AC6DC">Nimm Kontakt mit uns auf</h1>
+
+
+    <!-- Die Hero-Einstellungen sind von der Home-Seite übernommen, das Framework passt aber automatisch das Sizing des Bildes an, bezogen auf den Text-Inhalt und die vergebenen Margins/Paddings.  -->
+        <div class="hero is-medium">
+          <div class="hero-body">
+              <h1 class="has-text-weight-bold" style="color: #6AC6DC" >
+                Nimm Kontakt <br>mit uns auf.
+              </h1>
+          </div>
+        </div>
+
+  <div class="section">
     <p class="subtitle my-3 has-text-left ">
-         Hast du eine Frage, oder ein Anliegen, das du mit uns teilen möchtest? Oder möchtest du einfach mit uns <br>
-         darüber reden, wie cool sich Lernen mit Know-It-All anfühlt? Egal was – schreib es in unser Kontaktformular<br>
+         Hast du eine Frage, oder ein Anliegen, das du mit uns teilen möchtest? Oder möchtest du einfach mit uns
+         darüber reden, wie cool sich Lernen mit Know-It-All anfühlt? Egal was – schreib es in unser Kontaktformular
          und wir melden uns bei dir.
       </p>
-  </section>
+  </div>
 
 <!-- Kontatformular start -->
 <section class="section is-small">
@@ -185,65 +197,6 @@
 
 
 
-<footer class="footer">
-
-<div class="columns">
-<div class="column has-text-weight-light">
-<a href="#" style="color:black;">
-  <p>
-  Login
-  </p>
-</a>
-</div>
-<div class="column has-text-right has-text-weight-light">
-  <a href="#" style="color:black;">
-    <p>Impressum</p>
-  </a>
-</div>
-</div>
-
-<div class="columns">
-<div class="column has-text-weight-light">
-<a href="#" style="color:black;">
-  <p>
-  Pricing
-  </p>
-</a>
-</div>
-<div class="column has-text-right has-text-weight-light">
-  <a href="#" style="color:black;">
-    <p>AGB</p>
-  </a>
-</div>
-</div>
-
-<div class="columns">
-<div class="column has-text-weight-light">
-<a href="#" style="color:black;">
-  <p>
-  Team
-  </p>
-</a>
-</div>
-<div class="column has-text-right has-text-weight-light">
-  <a href="#" style="color:black;">
-    <p>Datenschutz</p>
-  </a>
-</div>
-</div>
-
-
-
-<div class="content has-text-centered">
-<p>
-  <strong>Know It All</strong> by <a href="#" style="color:grey";>Laura von Känel | Bénédict Sandoz | Luana Ferrero</a> <br>
-  <p>Das Projekt entstand im Rahmen des Majors Media Application
-  an der <a href="www.fhgr.ch" style="color:black;">FH Graubünden</a>
-</p>
-</div>
-</footer>
-
-
 <script>
     document.addEventListener('DOMContentLoaded', () => {
 
@@ -274,4 +227,64 @@
 </script>
 
   </body>
+
+  <footer class="footer">
+
+  <div class="columns">
+  <div class="column has-text-weight-light">
+  <a href="#" style="color:black;">
+    <p>
+    Login
+    </p>
+  </a>
+  </div>
+  <div class="column has-text-right has-text-weight-light">
+    <a href="#" style="color:black;">
+      <p>Impressum</p>
+    </a>
+  </div>
+  </div>
+
+  <div class="columns">
+  <div class="column has-text-weight-light">
+  <a href="#" style="color:black;">
+    <p>
+    Pricing
+    </p>
+  </a>
+  </div>
+  <div class="column has-text-right has-text-weight-light">
+    <a href="#" style="color:black;">
+      <p>AGB</p>
+    </a>
+  </div>
+  </div>
+
+  <div class="columns">
+  <div class="column has-text-weight-light">
+  <a href="#" style="color:black;">
+    <p>
+    Team
+    </p>
+  </a>
+  </div>
+  <div class="column has-text-right has-text-weight-light">
+    <a href="#" style="color:black;">
+      <p>Datenschutz</p>
+    </a>
+  </div>
+  </div>
+
+
+
+  <div class="content has-text-centered">
+  <p>
+    <strong>Know It All</strong> by <a href="#" style="color:grey";>Laura von Känel | Bénédict Sandoz | Luana Ferrero</a> <br>
+    <p>Das Projekt entstand im Rahmen des Majors Media Application
+    an der <a href="www.fhgr.ch" style="color:black;">FH Graubünden</a>
+  </p>
+  </div>
+  </footer>
+
+
 </html>
