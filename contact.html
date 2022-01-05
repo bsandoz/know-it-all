@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Know-it-All</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <style>
+
+       .hero {
+         background: url(assets/Know-It-All_Hero-blau.png) center / cover;
+       }
+
+       h1 {
+         font-size: 5em;
+       }
+
+       section {
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <!-- Navigation -->
+      <nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">
+            <img src="assets/knowitall_Marke.png" width="30" height="30">
+          </a>
+
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarTop">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarTop" class="navbar-menu">
+      <div class="navbar-start">
+        <p class="is-size-5 mx-3">model your mind</p>
+        <a class="navbar-item href="/index.html">
+          Home
+        </a>
+
+        <a class="navbar-item" href="/app.html">
+          App
+        </a>
+
+        <a class="navbar-item href="/ueberuns.html">
+          Über uns
+        </a>
+
+        <a class="navbar-item" href="#kontakt">
+          Kontakt
+        </a>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-secondary">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <!-- Die Hero-Einstellungen sind von der Home-Seite übernommen, das Framework passt aber automatisch das Sizing des Bildes an, bezogen auf den Text-Inhalt und die vergebenen Margins/Paddings.  -->
+        <div class="hero is-medium">
+          <div class="hero-body">
+              <h1 class="has-text-weight-bold">
+                Nimm <span style="color: #6AC6D">Kontakt </span> <br>mit uns auf.
+              </h1>
+          </div>
+        </div>
+
+  <div class="section">
+    <p class="subtitle my-3 has-text-left ">
+      Hast du eine <span style="color: #6AC6D">Frage</span>, oder ein <span style="color: #6AC6D">Anliegen</span>, das du mit uns teilen möchtest? Oder möchtest du einfach mit uns
+         darüber reden, wie cool sich Lernen mit Know-It-All anfühlt? Egal was – schreib es in unser Kontaktformular
+         und wir melden uns bei dir.
+      </p>
+  </div>
+
+<!-- Kontatformular start -->
+<section class="section is-small">
+    <div class="field">
+      <label class="label">Name</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Text">
+      </div>
+    </div>
+
+
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control has-icons-left has-icons-right">
+        <input class="input is-danger" type="email" placeholder="Email" value="name@">
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span class="icon is-small is-right">
+          <i class="fas fa-exclamation-triangle"></i>
+        </span>
+      </div>
+      <p class="help is-danger">Die Email ist nicht gültig</p>
+    </div>
+
+    <div class="field-label">
+      <label class="label">Bist du schon Mitglied?</label>
+    </div>
+    <div class="field-body">
+      <div class="field is-narrow">
+        <div class="control">
+          <label class="radio">
+            <input type="radio" name="member">
+            Ja
+          </label>
+          <label class="radio">
+            <input type="radio" name="member">
+            Nein
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Du hast Fragen zu...</label>
+      <div class="control">
+        <div class="select">
+          <select>
+            <option>Modellen</option>
+            <option>Abo Optionen</option>
+            <option>Kooperationen</option>
+            <option>Diverses</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Nachricht</label>
+      <div class="control">
+        <textarea class="textarea" placeholder="Deine Nachricht"></textarea>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <label class="checkbox">
+          <input type="checkbox">
+          Ich akzeptiere die <a href="#">AGB</a>
+        </label>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <label class="label">Ich möchte den Newsletter von Know-It-All abonnieren</label>
+        <label class="radio">
+          <input type="radio" name="question">
+          Ja
+        </label>
+        <label class="radio">
+          <input type="radio" name="question">
+          Nein
+        </label>
+      </div>
+    </div>
+
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link">Senden</button>
+      </div>
+      <div class="control">
+        <button class="button is-link" style="color:#F39211">
+          <p>
+          Abbrechen
+          </p>
+        </button>
+      </div>
+    </div>
+
+</section>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+
+</script>
+
+  </body>
+
+  <footer class="footer">
+
+  <div class="columns">
+  <div class="column has-text-weight-light">
+  <a href="#" style="color:black;">
+    <p>
+    Login
+    </p>
+  </a>
+  </div>
+  <div class="column has-text-right has-text-weight-light">
+    <a href="#" style="color:black;">
+      <p>Impressum</p>
+    </a>
+  </div>
+  </div>
+
+  <div class="columns">
+  <div class="column has-text-weight-light">
+  <a href="#" style="color:black;">
+    <p>
+    Pricing
+    </p>
+  </a>
+  </div>
+  <div class="column has-text-right has-text-weight-light">
+    <a href="#" style="color:black;">
+      <p>AGB</p>
+    </a>
+  </div>
+  </div>
+
+  <div class="columns">
+  <div class="column has-text-weight-light">
+  <a href="#" style="color:black;">
+    <p>
+    Team
+    </p>
+  </a>
+  </div>
+  <div class="column has-text-right has-text-weight-light">
+    <a href="#" style="color:black;">
+      <p>Datenschutz</p>
+    </a>
+  </div>
+  </div>
+
+
+
+  <div class="content has-text-centered">
+  <p>
+    <strong>Know It All</strong> by <a href="#" style="color:grey";>Laura von Känel | Bénédict Sandoz | Luana Ferrero</a> <br>
+    <p>Das Projekt entstand im Rahmen des Majors Media Application
+    an der <a href="www.fhgr.ch" style="color:black;">FH Graubünden</a>
+  </p>
+  </div>
+  </footer>
+
+
+</html>
