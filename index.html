@@ -4,82 +4,198 @@
     <meta charset="utf-8">
     <title>Know-it-All</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <style>
+
+      section {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+       .hero {
+         background: url(assets/Know-It-All_Hero-big.png) center / cover;
+       }
+
+      h1 {
+        font-size: 5em;
+      }
+
+    </style>
+
+
   </head>
   <body>
 
-<!-- Navigation -->
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="index.html">
-          <img src="assets/knowitall_Marke_claim.png" width="112" height="28">
+
+    <!-- Navigation -->
+      <nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">
+            <img src="assets/knowitall_Marke.png" width="30" height="30">
+          </a>
+
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarTop">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarTop" class="navbar-menu">
+      <div class="navbar-start">
+        <p class="is-size-5 mx-3">model your mind</p>
+        <a class="navbar-item href="/index.html">
+          Home
         </a>
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarTop">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
+        <a class="navbar-item" href="/app.html">
+          App
+        </a>
 
-  <div id="navbarTop" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item href="/index.html">
-        Home
-      </a>
+        <a class="navbar-item href="/ueberuns.html">
+          Über uns
+        </a>
 
-      <a class="navbar-item" href="/app.html">
-        App
-      </a>
-
-      <a class="navbar-item href="/ueberuns.html">
-        Über uns
-      </a>
-
-      <a class="navbar-item" href="#kontakt">
-        Kontakt
-      </a>
-      </div>
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-secondary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
+        <a class="navbar-item" href="#kontakt">
+          Kontakt
+        </a>
         </div>
       </div>
-    </div>
-</nav>
 
-<section class="hero">
-  <img src="assets/titelbild_index.jpg" alt="Wissen to go">
-  <h1 class="title is-1 my-6 mx-6">Weil viel Wissen <br> ≠ viel Lernen heisst.</h1>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-secondary">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+  </nav>
+
+  <!-- Hero-Seiteneinstieg mit dem Haupt-Claim des Produkts. Bild-Datei wird im Head als Klasse gestylt, da das Framework keinen Code für Hero-Bilder bereitstellt. -->
+  <div class="hero is-medium">
+   <div class="hero-body">
+     <h1 class="my-4 has-text-weight-bold" style="color: orange" >
+       Wissen 2 Go.  </h1>
+     <p class="subtitle is-size-1 my-3">
+       Weil viel Wissen <br> ≠ viel Lernen heisst.
+     </p>
+   </div>
+ </div>
+
+
+<!-- Lead-Text, der zentriert 3/4 der Desktop-Fläche einnimmt -->
+<section class="my-4">
+  <p class="container has-text-weight-semibold has-text-centered is-size-4">Mentale Modelle, Heuristiken und Denkmuster – sie alle haben etwas gemeinsam: Die Welt wird sehr viel einfacher,
+    wenn man sie sich einprägt. Das macht man am besten mit Know-It-All – der neuen Plattform, mit der das Lernen
+    gerade viel schneller und schöner geworden ist.</p>
+  <p class="is-size-4 is-info has-text-centered"> <br><br>Let us model our minds together!</p>
 </section>
 
 
 
-        <p>Mentale Modelle, Heuristiken und Denkmuster – sie alle haben etwas gemeinsam: Die Welt wird sehr viel einfacher,
-          wenn man sie sich einprägt. Das macht man am besten mit Know-It-All – der neuen Plattform, mit der das Lernen
-          gerade viel schneller und schöner geworden ist. Let us model our minds together!</p>
+<!-- Section, die dazu dient, Erfolgsstories der App zu zeigen. Die Inhalte sind als Card gestylt und würden im Realszenario zu einem Blog-Beitrag verlinken.  -->
+<section class="container my-6">
+  <h2 class="is-size-2 has-text-centered is-full my-6">Unsere Erfolgsstories</h2>
 
-        <h2 class="is-size-2">Unsere Erfolgsstories</h2>
-        <div class="erfolgsstory_1">
-          <img src="" alt="">
-          <p>Platzhalter Text</p>
+<div class="columns mx-6">
+
+    <div class="column card mx-6 my-6">
+        <div class="card-image">
+          <figure class="image is-5by4">
+            <img src="assets/bild_success_1" alt="Bild unseres Erfolgs">
+          </figure>
         </div>
 
-        <div class="erfolgsstory_2">
-          <img src="" alt="">
-          <p>Platzhalter Text</p>
+        <div class="card-content">
+          <div class="content">
+            Lese hier, wie ein Schweizer Start-Up mit Know-It-All sein Team geschult hat und so zu mehr gegenseitigem Verständnis gefunden hat – ein Vorteil, der sich heute besonders in der Effizienz der Produktion deutlich macht.
+          </div>
+        </div>
+    </div>
+
+
+    <div class="column card mx-6 my-6">
+        <div class="card-image">
+          <figure class="image is-5by4">
+            <img src="assets/bild_success_2" alt="Bild unseres Erfolgs">
+          </figure>
         </div>
 
-        <h2>Was macht Lernen mit uns so einfach?</h2>
+        <div class="card-content">
+          <div class="content">
+            Dieses Sportunternehmen in der Schweiz baut auf die Ausbildung seiner Mitarbeitenden. Mit Know-It-All hat es eine Möglichkeit gefunden, die Mitarbeitenden auf ihrem eigenen Weg zu unterstützen, indem Sie lernen können, was sie interessiert.
+          </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+</section>
+
+
+<!-- Dieser Abschnitt fasst eine Aufzählung von drei Bild- und Textelementen, die im Design immer wieder verwendet werden. Die Text- und Bild-Elemente sind als Blöcke in der jeweiligen Spalte angeordnet.  -->
+<section class="container">
+
+  <h2 class="is-size-2 has-text-centered is-full my-6">Was macht Lernen mit uns so einfach?</h2>
+
+  <div class="columns">
+
+    <div class="column mx-6 has-text-centered">
+      <figure class="image is-128x128 is-inline-block">
+        <img class="is-rounded" src="assets/icon_handy.png">
+      </figure>
+      <p class="is-size-5 my-3">Unsere App hast du immer dabei: Optimiert für alle deine Geräte.</p>
+    </div>
+
+    <div class="column mx-6 has-text-centered">
+      <figure class="image is-128x128 is-inline-block">
+        <img class="is-rounded" src="assets/icon_klein.png">
+      </figure>
+      <p class="is-size-5 my-3">Einfache und kurze Lerneinheiten mit Praxisbezug. Yay! </p>
+    </div>
+
+    <div class="column mx-6 has-text-centered">
+      <figure class="image is-128x128 is-inline-block">
+        <img class="is-rounded" src="assets/icon_zeit.png">
+      </figure>
+      <p class="is-size-5 my-3">Lerne dann, wann du willst und kannst – nach deinem Gusto.</p>
+    </div>
+
+  </div>
+
+</section>
+
 
         <h2>Deine Vorteile mit Know-it-All</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <script src="js/main.js" charset="utf-8"></script>
   </body>
