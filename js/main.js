@@ -4,6 +4,7 @@ fetch("https://174836-19.web1.fh-htwchur.ch/wp-json/wp/v2/categories")
 	//.then(data => console.log(data))
 	.then((data) => writeCategories(data));
 
+//Funktion categoriesAnzeigen wird für jedes Element des fetch arrays ausgeführt
 function writeCategories (arrayMitAllenCategories) {
   arrayMitAllenCategories.forEach((oneCategories, i) => {
     console.log(oneCategories.id);
@@ -11,7 +12,7 @@ function writeCategories (arrayMitAllenCategories) {
 	});
 }
 
-
+//Erstellt anhand des Titels der Kategorie einen klickbaren Kategorie-Button und gibt die id in der URL mit.
 function categoriesAnzeigen(title, id) {
   const card = document.createElement("div");
 	card.setAttribute("class", "card");
