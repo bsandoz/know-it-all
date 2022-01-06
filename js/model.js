@@ -27,6 +27,8 @@ function writeAcfPost(jsonData) {
 function showModel(title, category) {
   const h1 = document.getElementById("title");
   h1.textContent = title;
+  const siteTitle = document.getElementById("site-title");
+  siteTitle.textContent = title + " | Know-It-All";
 }
 
 //Ruft alle anderen Felder aus dem HTML ab und ändert ihren Inhalt zu dem aus den ACF.
