@@ -1,15 +1,20 @@
+//Container in Variable speichern um später die Kategorien anzuhängen.
 var container = document.getElementById("categories-container");
 
+//Container wird an columns angehängt.
 var columns = document.getElementById("columns");
 
+//Vordefinierte Farben für die einzelnen Kategorie-Buttons
 let bgColorsArray = ["#6AC6DC", "#f39211", "#B7CD10", "#DA3C8E"];
 
+//Fetch der Kategorien aus dem WordPress Backend
 fetch("https://174836-19.web1.fh-htwchur.ch/wp-json/wp/v2/categories")
 //https://174836_19.web1.fh-htwchur.ch/wp-json/acf/v3/posts/
 	.then((response) => response.json())
 	//.then(data => console.log(data))
 	.then((data) => writeCategories(data));
 
+//Array der Kategorienamen
 var categoriesNames = [];
 
 //Funktion categoriesAnzeigen wird für jedes Element des fetch arrays ausgeführt

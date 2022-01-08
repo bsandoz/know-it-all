@@ -1,5 +1,7 @@
+//Holt die Kategorie-ID aus der URL.
 const params = new URLSearchParams(document.location.search);
 const categoryid = params.get("categoryid");
+
 
 var kategorieArray = [];
 var mainContainer = document.getElementById("main-container");
@@ -32,6 +34,8 @@ function writePosts(arrayMitAllenPosts) {
 	});
 }
 
+//Erstellt die Navigation, die es erlaubt, zwischen den Kategorien zu wechseln.
+//ToDo: Namen der Kategorien abrufen und in den als Linktext anzeigen.
 function createNavigation () {
 	console.log("Called createNavigation");
 	let prev = document.getElementById("previous-category");
@@ -60,6 +64,7 @@ function createNavigation () {
 function PostsAnzeigen(title, content, category, id, counter) {
 	console.log(counter);
 	let container;
+	//ToDo: Elegantere Lösung finden, die bei mehr Modellen auch funktioniert.
 	if (counter <= 1) {
 		container = document.getElementById("vertical-container-1");
 	} else if (counter > 1 && counter <= 3) {
@@ -110,13 +115,16 @@ function writeCustomField(data){
 	//console.log(data.acf.kurzbeschreibung);
 }
 
+/* Funktion hat nicht wie gewünscht funktioniert, deswegen andere Lösung gefunden.
 function createVerticalContainer() {
 	const cont = document.createElement("div");
 	cont.setAttribute("class", "is-parent is-vertical is-3");
 	cont.setAttribute("class", "container");
 	mainContainer.appendChild(cont);
 }
+*/
 
+//Updatet den counter und gibt ihn zurück zur Nutzung in writePosts.
 function updateCounter(count) {
 	let counter = count;
 	counter++;
@@ -124,7 +132,7 @@ function updateCounter(count) {
 }
 
 
-/*
+/* Nicht mehr benötigt
 function customFieldsAnzeigen(input) {
 	console.log(input);
 	kategorieField = document.createElement("p");
