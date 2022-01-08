@@ -2,7 +2,7 @@ const params = new URLSearchParams(document.location.search);
 const categoryid = params.get("categoryid");
 
 var kategorieArray = [];
-// var postNumber;
+var mainContainer = document.getElementById("main-container");
 
 fetch("https://174836-19.web1.fh-htwchur.ch/wp-json/wp/v2/posts")
 //https://174836_19.web1.fh-htwchur.ch/wp-json/acf/v3/posts/
@@ -15,20 +15,25 @@ createNavigation();
 //geht durch das Array von fetch und ruft die Funktionen PostsAnzeigen und customField für jeden Post auf.
 function writePosts(arrayMitAllenPosts) {
 	//console.log(arrayMitAllenPosts);
+	var counter = 0;
 	arrayMitAllenPosts.forEach((onePosts, i) => {
+		console.log(counter);
 		if (onePosts.categories == categoryid) {
-			let title = document.getElementById("categoryTitle");
+			let title = document.getElementById("category-title");
 			title.innerHTML = onePosts.acf.kategorie;
-			let subtitle = document.getElementById("categorySubtitle");
-			subtitle.innerHTML = "Übersicht der " + onePosts.acf.kategorie + "-Modelle";
+			let subtitle = document.getElementById("category-subtitle");
+			subtitle.innerHTML = "Übersicht über die " + onePosts.acf.kategorie + "-Modelle";
 			customField(onePosts.id);
-			//customFieldsAnzeigen(kategorieData);
-			setTimeout(() => { PostsAnzeigen(onePosts.title.rendered, onePosts.content.rendered, kategorieArray[i], onePosts.id); }, 2000);
+			//setTimeout(() => { PostsAnzeigen(onePosts.title.rendered, onePosts.content.rendered, kategorieArray[i], onePosts.id, counter); }, 1000);
+			PostsAnzeigen(onePosts.title.rendered, onePosts.content.rendered, kategorieArray[i], onePosts.id, counter);
+			counter = updateCounter(counter);
+			console.log(counter);
 		}
 	});
 }
 
 function createNavigation () {
+	console.log("Called createNavigation");
 	let prev = document.getElementById("previous-category");
 	prev.addEventListener("click", function() {
 		//Statischer Wert muss dynamisch gemacht werden, falls neue Kategorien dazukommen
@@ -52,18 +57,28 @@ function createNavigation () {
 }
 
 //erstellt ein card-Div mit Titel und Content und hängt die Elemente an den container an.
-function PostsAnzeigen(title, content, category, id) {
-	const card = document.createElement("div");
-	card.setAttribute("class", "card");
-	const h1 = document.createElement("h1");
-	h1.textContent = title;
+function PostsAnzeigen(title, content, category, id, counter) {
+	console.log(counter);
+	let container;
+	if (counter <= 1) {
+		container = document.getElementById("vertical-container-1");
+	} else if (counter > 1 && counter <= 3) {
+		container = document.getElementById("vertical-container-2");
+	} else if (counter > 3 && counter <= 5) {
+		container = document.getElementById("vertical-container-3");
+	} else if (counter > 5 && counter <= 7) {
+		container = document.getElementById("vertical-container-4");
+	}	else {
+		console.log("Not enough containers for amount of models.");
+	}
+	const card = document.createElement("article");
+	card.setAttribute("class", "is-child box my-3 mx-3 py-6 px-3 has-text-centered");
+	card.setAttribute("style", "background-color: #6AC6DC");
 	const p = document.createElement("p");
-	p.innerHTML = content;
-	const kategorie = document.createElement("p");
-	kategorie.innerHTML = category;
+	p.setAttribute("class", "is-size-5");
+	p.setAttribute("style", "color: white");
+	p.innerHTML = title;
 	container.appendChild(card);
-	card.appendChild(h1);
-	card.appendChild(kategorie);
 	card.appendChild(p);
 	card.addEventListener("click", function() {
 		localStorage.setItem("modelCategory", categoryid);
@@ -94,6 +109,20 @@ function writeCustomField(data){
 	//container.appendChild(kategorie);
 	//console.log(data.acf.kurzbeschreibung);
 }
+
+function createVerticalContainer() {
+	const cont = document.createElement("div");
+	cont.setAttribute("class", "is-parent is-vertical is-3");
+	cont.setAttribute("class", "container");
+	mainContainer.appendChild(cont);
+}
+
+function updateCounter(count) {
+	let counter = count;
+	counter++;
+	return counter;
+}
+
 
 /*
 function customFieldsAnzeigen(input) {

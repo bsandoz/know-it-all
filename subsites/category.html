@@ -1,12 +1,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//DE" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-
-<head>
-	<meta charset="utf-8" />
-	<title>KnowItAll - Kategorien</title>
-	<link rel="stylesheet" href="../css/style.css" title="" type="text/css" media="screen" charset="utf-8" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-</head>
+	<head>
+		<meta charset="utf-8" />
+		<title>Know It All - Kategorien</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+		<style>
+	      section {
+	        max-width: 80%;
+	        margin-left: auto;
+	        margin-right: auto;
+	      }
+		</style>
+	</head>
 
 <body>
 	<!-- Navigation -->
@@ -49,7 +54,89 @@
 		</div>
 	</nav>
 
+	<!--Ende Navigation-->
 
+	<div  style="background-color:#F0EFEF;">
+
+  <div>
+
+    <section class="section my-3" >
+
+      <p class="title" id="category-title"></p>
+      <p class="subtitle" id="category-subtitle"></p>
+
+    </section>
+
+</div>
+
+<div style="background-color: #BCBABA">
+
+    <section class="section is-paddingless level">
+
+      <p class="is-size-4 level-item" id="previous-category" style="color: white">Vorherige Kategorie</p>
+      <p class="is-size-4 level-item" id="current-category" style="color: white"></p>
+      <p class="is-size-4 level-item" id="next-category" style="color: white">Nächste Kategorie</p>
+
+    </section>
+  </div>
+</div>
+
+<section class="section is-small">
+
+<div class="tile is-ancestor" id="main-container">
+
+
+  <div class="is-parent is-vertical is-3" id="vertical-container-1">
+		<!--Vorlage
+    <article class="is-child box my-3 mx-3 py-6 px-3 has-text-centered" style="background-color: #6AC6DC">
+      <p class="is-size-5" style="color: white; ">Business Model Canvas</p>
+    </article>
+
+    <article class="is-child box my-3 mx-3 py-6 px-3 has-text-centered" style="background-color: #6AC6DC">
+      <p class="is-size-5" style="color: white; ">STP-Strategie</p>
+    </article>
+		-->
+  </div>
+
+  <div class="is-parent is-vertical is-3" id="vertical-container-2">
+		<!--Vorlage
+    <article class="is-child box my-3 mx-3 py-6 px-3 has-text-centered" style="background-color: #6AC6DC">
+      <p class="is-size-5" style="color: white; ">Positionierungskreuz</p>
+    </article>
+
+    <article class="is-child box my-3 mx-3 py-6 px-3 has-text-centered" style="background-color: #6AC6DC">
+      <p class="is-size-5" style="color: white; ">Value Proposition Design</p>
+    </article>
+		-->
+  </div>
+
+  <div class="is-parent is-vertical is-3" id="vertical-container-3">
+		<!--
+    <article class="is-child box my-3 mx-3 py-6 px-3 has-text-centered" style="background-color: #6AC6DC">
+      <p class="is-size-5" style="color: white; ">Wachstumsmatrix</p>
+    </article>
+
+    <article class="is-child box my-3 mx-3 py-6 px-3 has-text-centered" style="background-color: #6AC6DC">
+      <p class="is-size-5" style="color: white; ">Wettbewerbsstrategie</p>
+    </article>
+		-->
+  </div>
+
+  <div class="is-parent is-vertical is-3" id="vertical-container-4">
+		<!--
+    <article class="is-child box my-3 mx-3 py-6 px-3 has-text-centered" style="background-color: #6AC6DC">
+      <p class="is-size-5" style="color: white; ">Marktchancen-Navigator</p>
+    </article>
+		-->
+  </div>
+
+
+</div>
+
+
+</section>
+
+	<!-- Alter Code
 	<h1 id="categoryTitle">Category overview</h1>
 	<h2 id="categorySubtitle">Übersicht der Modelle</h2>
 
@@ -64,6 +151,7 @@
 	<div id="app">
 		<div class="container" id="container"></div>
 	</div>
+-->
 
 	<script src="../js/showCategoryModels.js" charset="utf-8"></script>
 </body>
