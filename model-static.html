@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- Kann man den Seitentitel auch dynamisch ausgeben? -->
+    <title>[Modellname]</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+
+      section {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+    </style>
+
+
+  </head>
+  <body>
+
+
+
+     <!-- Navigation -->
+      <nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="index.html">
+            <img src="assets/knowitall_Marke.png" width="30" height="30">
+          </a>
+
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarTop">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarTop" class="navbar-menu">
+      <div class="navbar-start">
+        <p class="is-size-5 mx-3">model your mind</p>
+        <a class="navbar-item" href="/dashboard.html">
+          Dashboard
+        </a>
+
+        <a class="navbar-item" href="/dashboard.html">
+          Konto
+        </a>
+      </div>
+    </div>
+
+
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-secondary">
+              <strong>Logout</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <!-- Die angepassten Hero-Einstellungen gruppieren hier die wichtigsten Infos über das jeweils ausgewählte Modell. Das div als äusserster Container wird benötigt, dass die Hero-Farbe ganzflächig verläuft und nicht nur 8o%. -->
+        <div class="hero is-light is-medium">
+          <section class="section">
+            <div class="section hero-body columns py-3 px-0" >
+              <div class="column is-half">
+                <h1 class="has-text-weight-bold is-size-1">AIDA-Prinzip </h1>
+              </div>
+              <div class="column is-half has-text-right py-3">
+                <p class="has-text-weight-bold is-size-1"  style="color: #BCBABA">#marketing</p>
+              </div>
+            </div>
+
+            <div class="container my-3">
+              <p class="subtitle is-size-5">
+                Mit dem AIDA-Modell kann man ganz einfach Werbung untersuchen: Es analysiert, wo die Aufmerksamkeit des Betrachters hinfällt und ob diese mit den richtigen Reizen gefestigt wird. <br>
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <section class="section">
+          <figure class="image">
+            <img src="assets/aida_modell.png" alt="AIDA-Modell">
+          </figure>
+        </section>
+
+
+        <!-- Grössere Layout Baustelle mit verschiedenen Möglichkeiten. -->
+
+        <!-- <section class="tile is-ancestor">
+
+          <div class="tile is-parent is-4 is-vertical">
+            <p class="tile is-child is-uppercase is-size-5" style="color: #BCBABA"> Wurde entwickelt von</p>
+            <p class="tile is-child is-size-4">Elmo Lewis</p>
+          </div>
+
+          <div class="tile is-parent is-8 is-vertical">
+            <p class="tile is-parent is-uppercase is-size-5" style="color: #BCBABA"> Wieso wurde es entwickelt</p>
+            <p class="tile is-parent is-size-4">Lorem ipsum dolor sit amet</p>
+          </div>
+
+        </section> -->
+
+        <!-- <div style="background-color: #BABABA">
+          <section class="section columns hero-body">
+            <div class="column is-quarter">
+              <p class="tile is-child is-uppercase is-size-5" style="color: #BCBABA"> Wurde entwickelt von</p>
+              <p class="tile is-child is-size-4">Elmo Lewis</p>
+            </div>
+
+            <div class="column is-three-quarters">
+              <p class="is-ligt is-uppercase is-size-5" style="color: #BCBABA"> Wieso wurde es entwickelt</p>
+              <p class="is-size-4">Lorem ipsum dolor sit amet</p>
+            </div>
+
+            </section>
+        </div> -->
+
+
+<!-- Habe Probiert; nicht ganz perfekt, evtl. hast du noch Optimierungen? gebastelt mit Leerraum -->
+
+<div class="container-max-width notification" >
+  <div class="notification">
+    <div class="columns notification-item has-text-centered">
+      <div class="column">
+        <p class="is-size-6 is-uppercase">Von wem wurde es entwickelt?</p>
+      </div>
+      <div class="column">
+        <p class="is-size-6 is-uppercase" >Warum wurde es entwickelt?</p>
+      </div>
+    </div>
+
+    <div class="columns level-item has-text-centered">
+      <div class="column">
+        <p class="is-size-6" style="color: black;">
+          Elmo Lewis
+        </p>
+      </div>
+      <div class="column">
+        <p class="is-size-6" style="color: black;">Lorem ipsum dolor sit amet, consectetur adipisicing eli.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="level">
+    <div class="level-item has-text-centered">
+      <div>
+        <figure class="">
+          <img src="assets/bubble-blau.png" alt="Aufzaehlung">
+        </figure>
+        <p style="color: #F5F5F5">Analyse der Werbewirkung</p>
+        <p class="is-size-7">Analyse der Werbewirkung</p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <figure class="">
+          <img src="assets/bubble-gruen.png" alt="Aufzaehlung">
+        </figure>
+        <p style="color: #F5F5F5">Analyse der Werbewirkung</p>
+        <p class="is-size-7">AIDA ist  ein Akronym</p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <figure class="">
+          <img src="assets/bubble-pink.png" alt="Aufzaehlung">
+        </figure>
+        <p style="color: #F5F5F5">Analyse der Werbewirkung</p>
+        <p class="is-size-7">Kaufentscheid in vier Phasen</p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <figure class="">
+          <img src="assets/bubble-orange.png" alt="Aufzaehlung">
+        </figure>
+        <p style="color: #F5F5F5">Analyse der Werbewirkung</p>
+        <p class="is-size-7">Wurde bereits erweitert</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+      <section class="section">
+        <p class="is-uppercase is-size-5 py-3" style="color: #BCBABA"> Wann wird das Modell angewendet?</p>
+        <p class="is-size-4">Das AIDA-Modell dient zur Analyse von Werbung und deren Wirkung auf den:die Betrachter:in (besonders statische: z.B. Flyer, Plakat, aber auch Online-Werbung. Funktioniert auch für dynamische Formate). Durch die Analyse kann das Werbeprodukt optimiert werden, indem hinterfragt wird, ob die Informations- und Gestaltungselemente zielführend eingesetzt werden.
+
+        <br><br>Das AIDA-Modell kann man auch als Konzeptrahmen für ein Werbeprodukt verwenden: Indem man eine neue Massnahme direkt nach den vier Dimensionen plant, muss diese später nicht darauf optimiert werden.
+        </p>
+      </section>
+
+      <section class="section">
+        <p class="is-uppercase is-size-5 py-3" style="color: #BCBABA"> Erklärung des Modells</p>
+        <p class="is-size-4">
+          AIDA ist ein Akronym und schlüsselt sich folgendermassen auf:
+          <br><br>
+          A für Attention: Man geht davon aus, dass jedes Werbemittel ein Element haben muss, das die      		Aufmerksamkeit der Betrachtenden erregt. Das können auffällige Farben, bekannte Gesichter (z.B. Promis) oder auch Tabu-streifende Dinge sein (Nacktheit, Brutalität, etc.)
+          <br><br>
+          I für Interest: Nachdem die Aufmerksamkeit der Betrachtenden erreicht wurde, wird das Interesse geweckt. Dazu dient z.B. ein animierender Slogan, die gezielte Zielkunden-Ansprache (z.B. Ansprache eines Bedürfnisses) oder auch die Tonspur, welche weiteres Interesse weckt.
+          <br><br>
+          D für Desire: Hier wird das Werbeversprechen platziert. Es beantwortet, wieso die Betrachtenden das Produkt besitzen “sollen”. Im besten Fall wird hier der Kaufwunsch ausgelöst.
+          <br><br>
+          A für Action: Wenn der Kaufwunsch besteht, sollen die Betrachtenden wissen, wo sie nun das Produkt beziehen können. Dazu braucht es einen Call-to-Action, also eine Information, bei welchem Händler und zu welchen Konditionen das Produkt erwerblich ist.
+        </p>
+      </section>
+
+      <section class="section">
+        <p class="is-uppercase is-size-5 py-3" style="color: #BCBABA"> Anwendungsbeispiel des Modells</p>
+        <figure class="image">
+          <img src="assets/aida_beispiel.png" alt="Beispiel des AIDA-Modells">
+
+        </figure>
+      </section>
+
+
+      <div style="background-color: #F0EFEF">
+
+        <section class="section">
+          <p class="is-uppercase is-size-5 py-3" style="color: #BCBABA">Wie wendet man das Modell an? </p>
+          <p class="is-size-4"> Wendet man das AIDA-Modell auf eine bestehende Werbung an, so geht man am besten der Reihenfolge der Buchstaben nach: Zuerst wird das aufmerksamkeitsstiftende Element identifiziert, dann die Botschaft, die das Interesse weckt, dann das Statement, das den Kaufwunsch auslöst und schlussendlich die Angaben, wie man den Kaufwunsch erfüllen kann.
+            <br><br>
+            Baut man eine Werbung um das AIDA-Modell herum auf, so kann man dies nach dem gleichen Ablauf machen wie bei der Analyse, oder gleich umgekehrt. </p>
+        </section>
+
+        <section class="section">
+          <p class="is-uppercase is-size-5 py-3" style="color: #BCBABA">Kritik am Modell</p>
+          <p class="is-size-4"> Das Modell existiert bereits seit 1898 und wurde daher schon viele Male hinterfragt. Zwar wird es auch heute noch in vielen Schulen als nützliches Prinzip gelehrt, gerade aus dem User-orientierten Bereich stammen jedoch neue Prinzipien, die die Überlegung hinter AIDA ergänzen oder vereinfachen. Eines der wichtigsten konkurrierenden Modelle ist die DAGMAR-Formel (Defining Advertising Goals for Measured Advertising Results) welche 1961 von Russel H. Colley entwickelt wurde. </p>
+
+        </section>
+
+      </div>
+
+
+      <section class="section">
+
+        <p class="is-uppercase is-size-5 py-6 my-4" style="color: #BCBABA">Wie wendet man das Modell an? </p>
+
+        <div class="columns">
+
+          <div class="column card mx-6">
+            <div class="card-image">
+              <img src="assets/aida_reduziert.png" alt="AIDA-Modell">
+            </div>
+            <div class="card-content">
+              <p class="is-size-4  has-text-centered"> Ein Modell zur Analyse von Werbung.</p>
+            </div>
+          </div>
+
+          <div class="column card mx-6">
+            <div class="card-image">
+              <img src="assets/aida_reduziert.png" alt="AIDA-Modell">
+            </div>
+            <div class="card-content">
+              <p class="is-size-4 has-text-centered"> Ein Modell zur Analyse von Werbung.</p>
+            </div>
+          </div>
+
+          <div class="column card mx-6">
+            <div class="card-image">
+              <img src="assets/aida_reduziert.png" alt="AIDA-Modell">
+            </div>
+            <div class="card-content">
+              <p class="is-size-4  has-text-centered"> Ein Modell zur Analyse von Werbung.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+
+  </body>
+
+ <!-- Code für den Footer – ueberall gleich.  -->
+  <footer class="footer">
+
+  <div class="columns">
+    <div class="column has-text-weight-light">
+    <a href="#" style="color:black;">
+      <p>
+      Login
+      </p>
+    </a>
+    </div>
+    <div class="column has-text-right has-text-weight-light">
+      <a href="#" style="color:black;">
+        <p>Impressum</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column has-text-weight-light">
+    <a href="#" style="color:black;">
+      <p>
+      Pricing
+      </p>
+    </a>
+    </div>
+    <div class="column has-text-right has-text-weight-light">
+      <a href="#" style="color:black;">
+        <p>AGB</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column has-text-weight-light">
+    <a href="#" style="color:black;">
+      <p>
+      Team
+      </p>
+    </a>
+    </div>
+    <div class="column has-text-right has-text-weight-light">
+      <a href="#" style="color:black;">
+        <p>Datenschutz</p>
+      </a>
+    </div>
+  </div>
+
+
+
+  <div class="content has-text-centered">
+    <p>
+      <strong>Know It All</strong> by <a href="#" style="color:grey";>Laura von Känel | Bénédict Sandoz | Luana Ferrero</a> <br>
+      <p>Das Projekt entstand im Rahmen des Majors Media Application
+      an der <a href="https://www.fhgr.ch" style="color:black;">FH Graubünden</a>
+    </p>
+  </div>
+</footer>
+
+
+</html>
