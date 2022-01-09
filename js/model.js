@@ -31,7 +31,7 @@ function showModel(title, category) {
   siteTitle.textContent = title + " | Know-It-All";
 }
 
-//Ruft alle anderen Felder aus dem HTML ab und ändert ihren Inhalt zu dem aus den ACF.
+//Ruft alle anderen Felder aus model.html ab und ändert ihren Inhalt zu dem aus den ACF.
 function showAcfModel(category, description, postImage, author, usage, explanation, stepbystep, exampleImage, exampleText, criticism, combinable) {
   const kategorieText = document.getElementById("category");
   kategorieText.textContent = "#" + category;
@@ -61,7 +61,8 @@ function showAcfModel(category, description, postImage, author, usage, explanati
   kritikText.innerHTML = criticism;
   const kombinierbarkeitText = document.createElement("p");
   kombinierbarkeitText.innerHTML = combinable;
-  /*Alter Code
+
+  /* Alter Code, nicht mehr benötigt
   container.appendChild(kategorieText);
   container.appendChild(autorText);
   container.appendChild(beitragsbildImage);
